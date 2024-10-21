@@ -1,0 +1,121 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+ 
+local Window = Rayfield:CreateWindow({
+    Name = "Island_Tribes🌴",
+    LoadingTitle = "Urusei Yatsura",
+    LoadingSubtitle = "by lum_ataru",
+    ConfigurationSaving = {
+       Enabled = false,
+       FolderName = nil, -- Create a custom folder for your hub/game
+       FileName = "I_Love_Anime"
+    },
+    Discord = {
+       Enabled = false,
+       Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+    },
+    KeySystem = true, -- Set this to true to use our key system
+    KeySettings = {
+       Title = "Island_Tribes🌴",
+       Subtitle = "Key System Urusei Yatsura",
+       Note = "lum_ataru",
+       FileName = "ANIME ON TOP", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+       GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+       Key = {"https://pastebin.com/raw/CmvtLtHf"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+    }
+ })
+ 
+ local MainTab = Window:CreateTab("Main🏯", nil) -- Title, Image
+ local MainSection = MainTab:CreateSection("Main")
+ 
+Rayfield:Notify({
+   Title = "welcome to Island_Tribes🌴 ",
+   Content = "kill kids and take there candy",
+   Duration = 2,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+ 
+local Button = MainTab:CreateButton({
+   Name = "infinite yield",
+   Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()  
+  end,
+})
+ 
+local Button = MainTab:CreateButton({
+    Name = "dupe",
+    Callback = function()
+        getgenv().olddata = game:GetService("ReplicatedStorage").References.Comm.Events.SetSettings
+        game:GetService("ReplicatedStorage").References.Comm.Events.SetSettings:FireServer(getgenv().olddata)    
+    end,
+ })
+ 
+ local Button = MainTab:CreateButton({
+    Name = "soul duping need wood chest",
+    Callback = function()
+        local chest = game:GetService("Workspace").Replicators.NonPassive["Wood Storage Chest"]
+        local putIn = true
+        local itemIDs = {204, 202, 201, 203, 218, 216} -- IDs for Max Soul
+        local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+    
+        for _, itemID in ipairs(itemIDs) do
+            Event:FireServer(chest, putIn, itemID)
+        end
+    end,
+ })
+ 
+ local Button = MainTab:CreateButton({
+    Name = "hard chest pack",
+    Callback = function()
+      local chest = game:GetService("Workspace").Replicators.NonPassive["Wood Storage Chest"]
+      local putIn = true
+      local itemIDs = {382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382, 382} -- IDs for hard chest pack
+      local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+  
+      for _, itemID in ipairs(itemIDs) do
+          Event:FireServer(chest, putIn, itemID)
+      end
+  end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "easter glider",
+   Callback = function()
+     local chest = game:GetService("Workspace").Replicators.NonPassive["Wood Storage Chest"]
+     local putIn = true
+     local itemIDs = {272} -- IDs for candy pack
+     local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+ 
+     for _, itemID in ipairs(itemIDs) do
+         Event:FireServer(chest, putIn, itemID)
+     end
+ end,
+})
+
+local Tab2 = Window:CreateTab("Tab dupe diffrent items", nil) -- Title, Image
+local Section = Tab2:CreateSection("dupe diffrent items")
+
+local Button = Tab2:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+      local chest = game:GetService("Workspace").Replicators.NonPassive["Wood Storage Chest"]
+      local putIn = true
+      local itemIDs = {188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188} -- IDs for candy pack
+      local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+  
+      for _, itemID in ipairs(itemIDs) do
+          Event:FireServer(chest, putIn, itemID)
+      end
+ end,
+})
+
+
