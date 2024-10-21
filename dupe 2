@@ -101,21 +101,25 @@ local Button = MainTab:CreateButton({
  end,
 })
 
-local Tab2 = Window:CreateTab("Tab dupe diffrent items", nil) -- Title, Image
-local Section = Tab2:CreateSection("dupe diffrent items")
-
-local Button = Tab2:CreateButton({
-   Name = "Button Example",
+local Button = MainTab:CreateButton({
+   Name = "ac bypass",
    Callback = function()
-      local chest = game:GetService("Workspace").Replicators.NonPassive["Wood Storage Chest"]
-      local putIn = true
-      local itemIDs = {188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188, 188} -- IDs for candy pack
-      local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
-  
-      for _, itemID in ipairs(itemIDs) do
-          Event:FireServer(chest, putIn, itemID)
+   local Players = game:GetService("Players")
+   local RunService = game:GetService("RunService")
+   local Highlight = Instance.new("Highlight")
+  Highlight.Name = "Highlight"
+function ApplyToCurrentPlayers()
+   for i,player in pairs(Players:GetChildren()) do
+      repeat wait() until player.Character
+      if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+         local HighlightClone = Highlight:Clone()
+         HighlightClone.Adornee = player.Character
+         HighlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+         HighlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+         HighlightClone.Name = "Highlight"
       end
- end,
-})
-
-
+   end
+end
+RunService.Heartbeat:Connect(function()
+   ApplyToCurrentPlayers()
+end)
