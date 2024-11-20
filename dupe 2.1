@@ -375,14 +375,14 @@ local Button = Tab4:CreateButton({
  end,
 })
 
-local Section = Tab4:CreateSection("Glider")
+local Section = Tab4:CreateSection("Armor")
 
  local Button = Tab4:CreateButton({
-    Name = "🪁Easter Glider🪁",
+    Name = "ob Armor",
     Callback = function()
         local chest = game:GetService("Workspace").Replicators.NonPassive["Moonstone Storage Chest"]
         local putIn = true
-        local itemIDs = {272}
+        local itemIDs = {225,226,227,228,235}
         local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
     
         for _, itemID in ipairs(itemIDs) do
@@ -392,11 +392,11 @@ local Section = Tab4:CreateSection("Glider")
  })
 
  local Button = Tab4:CreateButton({
-    Name = "🪁Glider🪁",
+    Name = "soul Aromr",
     Callback = function()
         local chest = game:GetService("Workspace").Replicators.NonPassive["Moonstone Storage Chest"]
         local putIn = true
-        local itemIDs = {301}
+        local itemIDs = {204, 202, 201, 203, 218, 216}
         local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
     
         for _, itemID in ipairs(itemIDs) do
@@ -405,7 +405,7 @@ local Section = Tab4:CreateSection("Glider")
     end,
  })
 
-local Section = Tab4:CreateSection("Other")
+local Section = Tab4:CreateSection("Pumpkin stuff")
 
  local Button = Tab4:CreateButton({
     Name = "🎃Pumpkin Shield🎃",
@@ -413,6 +413,41 @@ local Section = Tab4:CreateSection("Other")
         local chest = game:GetService("Workspace").Replicators.NonPassive["Moonstone Storage Chest"]
         local putIn = true
         local itemIDs = {379}
+        local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+    
+        for _, itemID in ipairs(itemIDs) do
+            Event:FireServer(chest, putIn, itemID)
+        end
+    end,
+ })
+
+ local Button = Tab4:CreateButton({
+    Name = "🎃Pumpkin 🎃",
+    Callback = function()
+     local localChest = game:GetService("Workspace").Replicators.NonPassive["Moonstone Storage Chest"]
+     local putIn = true
+     local itemIDs = {}
+      
+      for i = 1, 500 do
+          table.insert(itemIDs, 378)
+      end
+      
+      local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
+      
+      for _, itemID in ipairs(itemIDs) do
+          Event:FireServer(localChest, putIn, itemID)
+        end
+    end,
+ })
+
+local Section = Tab4:CreateSection("Swords")
+
+ local Button = Tab4:CreateButton({
+    Name = "moonstone swords",
+    Callback = function()
+        local chest = game:GetService("Workspace").Replicators.NonPassive["Moonstone Storage Chest"]
+        local putIn = true
+        local itemIDs = {369,369,369,369,369,369,369,369,369,369}
         local Event = game:GetService("ReplicatedStorage").References.Comm.Events.UpdateStorageChest
     
         for _, itemID in ipairs(itemIDs) do
