@@ -4,11 +4,11 @@ local AtlasUi = Atlas.new({
     ConfigFolder = "IslandTribes"; 
     Credit = "Credits: Elitechaosss";
     Color = Color3.fromRGB(120, 120, 255);
-    UseLoader = false;
+    UseLoader = true;
     Bind = "LeftBracket";
     FullName = "Island Tribes";
     CheckKey = function(lbozo)
-        return lbozo == "Elite"
+        return lbozo == "sigma"
     end;
     Discord = "https://discord.gg/radd9wnwNp";
 })
