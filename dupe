@@ -1,14 +1,14 @@
 local Atlas = loadstring(game:HttpGet("https://raw.githubusercontent.com/hiptodude2/the-opness-of-island-tribes/main/AtlasNewVers.lua"))()
 local AtlasUi = Atlas.new({
-    Name = "🌴 Island Tribes Eliter 🌴";
+    Name = "🌴 Island Tribes thing";
     ConfigFolder = "IslandTribes"; 
-    Credit = "Credits: Elitechaosss";
-    Color = Color3.fromRGB(120, 120, 255);
+    Credit = "casey the whigga";
+    Color = Color3.fromRGB(255, 120, 255);
     UseLoader = false;
     Bind = "LeftBracket";
     FullName = "Island Tribes";
     CheckKey = function(lbozo)
-        return lbozo == "Elite"
+        return lbozo == "meow"
     end;
     Discord = "https://discord.gg/radd9wnwNp";
 })
