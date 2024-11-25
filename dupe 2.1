@@ -235,7 +235,7 @@ local Button = Tab2:CreateButton({
  local Button = Tab2:CreateButton({
     Name = "meow ",
     Callback = function()
-    local BuyWorldEvent =  ReplicatedStorage:WaitForChild("References"):WaitForChild("Comm"):WaitForChild("Events"):WaitForChild("BuyWorldEvent")
+    BuyWorldEvent =  ReplicatedStorage:WaitForChild("References"):WaitForChild("Comm"):WaitForChild("Events"):WaitForChild("BuyWorldEvent")
        RemoteEvents['BuyWorldEvent']:FireServer(1)
     end
 })
