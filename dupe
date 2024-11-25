@@ -8,7 +8,7 @@ local AtlasUi = Atlas.new({
     Bind = "LeftBracket";
     FullName = "Island Tribes";
     CheckKey = function(lbozo)
-        return lbozo == "meow"
+        return lbozo == "Elite"
     end;
     Discord = "https://discord.gg/radd9wnwNp";
 })
