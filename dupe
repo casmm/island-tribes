@@ -921,17 +921,8 @@ function PlayerLock()
 end
 
 function Pumpkins()
-    while getgenv().configs.Pumpkins do
-        if getgenv().configs.Pumpkins then
-            task.wait()
-            if IsPlayerAlive(LocalPlayer) then
-                local hum = LocalPlayer.Character.Humanoid
-                if hum.Health < 75 then
-                    RemoteEvents['InventoryInteraction']:FireServer(378, "Eat")
-                end
-            end
-        end
-    end
+   RemoteEvents['InventoryInteraction']:FireServer(378, "Eat")
+   RemoteEvents['InventoryInteraction']:FireServer(378, "Eat")
 end
 
 function SafeDeath()
