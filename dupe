@@ -1912,7 +1912,7 @@ ChestSpawningSection:CreateButton({
 ChestSpawningSection:CreateButton({
     Name = 'Spawn Hard Treaure Chest(1000 tokens)',
     Callback = function()
-        RemoteEvents['BuyWorldEvent']:FireServer(16)
+        RemoteEvents['CraftItem']:FireServer(221)
     end
 })
 
