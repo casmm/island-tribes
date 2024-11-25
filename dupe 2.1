@@ -203,6 +203,7 @@ local Button = Tab2:CreateButton({
   end,
 })
 
+
  local Button = Tab2:CreateButton({
     Name = "🪓Fresh pack 25x",
     Callback = function()
@@ -229,6 +230,13 @@ local Button = Tab2:CreateButton({
           Event:FireServer(chest, putIn, itemID)
       end
   end,
+}) 
+
+ local Button = Tab2:CreateButton({
+    Name = "meow ",
+    Callback = function()
+       RemoteEvents['BuyWorldEvent']:FireServer(1)
+    end
 })
 
 local Tab3 = Window:CreateTab("😵‍💫 Crazy Dupe", nil)
