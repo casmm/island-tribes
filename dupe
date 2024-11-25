@@ -1913,7 +1913,7 @@ ChestSpawningSection:CreateButton({
 ChestSpawningSection:CreateButton({
     Name = 'Craft Item',
     Callback = function()
-        RemoteEvents['Spawned']:FireServer(2)
+        RemoteEvents['CraftItem']:FireServer(301)
     end
 })
 
