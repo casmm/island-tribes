@@ -1905,7 +1905,7 @@ ChestSpawningSection:CreateButton({
 ChestSpawningSection:CreateButton({
     Name = 'Craft Item candy snow ',
     Callback = function()
-        RemoteEvents['CraftItem']:FireServer(353)
+        RemoteEvents['CraftItem']:FireServer(337)
     end
 })
 
@@ -2193,9 +2193,9 @@ AutoSellSection:CreateToggle({
 local ArmorTraderSection = AutoSell:CreateSection('Armor Trader')
 
 ArmorTraderSection:CreateButton({
-    Name = 'Diamond Shield = 100 Token',
+    Name = 'frosty?',
     Callback = function()
-        RemoteEvents['TradeTrader']:FireServer("Armour Trader", 28)
+        RemoteEvents['TradeTrader']:FireServer("Frosty", 4)
     end
 })
 
