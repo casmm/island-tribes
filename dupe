@@ -1903,7 +1903,7 @@ ChestSpawningSection:CreateButton({
 })
 
 ChestSpawningSection:CreateButton({
-    Name = 'Craft Item candy snow ',
+    Name = 'Craft Item pumpkin tourch ',
     Callback = function()
         RemoteEvents['CraftItem']:FireServer(337)
     end
