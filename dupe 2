@@ -2916,16 +2916,16 @@ ChestSpawningSection:CreateButton({
 })
 
 ChestSpawningSection:CreateButton({
-    Name = 'Spawn Medium Treaure Chest(450 tokens)',
+    Name = 'Craft Item pumpkin tourch ',
     Callback = function()
-        RemoteEvents['BuyWorldEvent']:FireServer(2)
+        RemoteEvents['CraftItem']:FireServer(337)
     end
 })
 
 ChestSpawningSection:CreateButton({
-    Name = 'Spawn Hard Treaure Chest(1000 tokens)',
+    Name = 'Craft Item pumpkin sheid',
     Callback = function()
-        RemoteEvents['BuyWorldEvent']:FireServer(3)
+        RemoteEvents['CraftItem']:FireServer(379)
     end
 })
 
