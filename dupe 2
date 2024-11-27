@@ -2906,9 +2906,9 @@ ChestSpawningSection:CreateButton({
 })
 
 ChestSpawningSection:CreateButton({
-    Name = 'Craft Item pumpkin bag',
+    Name = 'Craft Item candy bag',
     Callback = function()
-        RemoteEvents['CraftItem']:FireServer(380)
+        RemoteEvents['CraftItem']:FireServer(186)
     end
 })
 
