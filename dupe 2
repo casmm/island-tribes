@@ -2919,6 +2919,13 @@ ChestSpawningSection:CreateButton({
     end
 })
 
+ChestSpawningSection:CreateButton({
+    Name = 'Craft Item pumpkin bag',
+    Callback = function()
+        RemoteEvents['CraftItem']:FireServer(380)
+    end
+})
+
 local ChestOpeningSection = Chests:CreateSection('Chest Opening')
 
 ChestOpeningSection:CreateButton({
