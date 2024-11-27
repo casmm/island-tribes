@@ -1,14 +1,13 @@
-
 local Atlas = loadstring(game:HttpGet("https://raw.githubusercontent.com/hiptodude2/the-opness-of-island-tribes/main/AtlasNewVers.lua"))()
 local AtlasUi = Atlas.new({
     Name = "Island Tribes thing";
     ConfigFolder = "IslandTribes"; 
     Credit = "Casey ";
     Color = Color3.fromRGB(255, 120, 255);
-    UseLoader = true;
+    UseLoader = false;
     Bind = "LeftBracket";
     FullName = "Island Tribes Oblitorator";
-    CheckKey = function(lbozo) -- this can be nil to disable key checking
+    CheckKey = nil-- this can be nil to disable key checking
         return lbozo == "sigma"
     end;
     Discord = "https://discord.gg/";
