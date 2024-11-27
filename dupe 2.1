@@ -235,9 +235,9 @@ local Button = Tab2:CreateButton({
 local Button = Tab2:CreateButton({
     Name = "craft item maybe work",
     Callback = function()
-  local  itemID = {379}
-  local Event = game:GetService("ReplicatedStorage").References.Comm.Events.CraftItem
-  for _, itemID in ipairs(itemIDs) do
+    	local itemID = {183}
+	local Event = game:GetService("ReplicatedStorage").References.Comm.Events.CraftItem
+ 	 for _, itemID in ipairs(itemIDs) do
       Event:FireServer(itemID)
 	end 
 })
