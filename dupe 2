@@ -7,7 +7,8 @@ local AtlasUi = Atlas.new({
     UseLoader = false;
     Bind = "LeftBracket";
     FullName = "Island Tribes Oblitorator";
-    CheckKey = nil-- this can be nil to disable key checking
+    CheckKey = function(lbozo) -- this can be nil to disable key checking
+	 return lbozo == "Sigma"
     end;
     Discord = "https://discord.gg/";
 })
