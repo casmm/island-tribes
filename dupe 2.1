@@ -237,6 +237,7 @@ local Button = Tab2:CreateButton({
     Callback = function()
   local  itemID = {379}
   local Event = game:GetService("ReplicatedStorage").References.Comm.Events.CraftItem
+  for _, itemID in ipairs(itemIDs) do
       Event:FireServer(itemID)
 	end 
 })
