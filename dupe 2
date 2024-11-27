@@ -2899,9 +2899,9 @@ MiscFindingSection:CreateDropdown({
 local ChestSpawningSection = Chests:CreateSection('Chest Spawning')
 
 ChestSpawningSection:CreateButton({
-    Name = 'Spawn Easy Treaure Chest(100 tokens)',
+    Name = 'Craft Sleigh',
     Callback = function()
-        RemoteEvents['BuyWorldEvent']:FireServer(1)
+        RemoteEvents['CraftItem']:FireServer(183)
     end
 })
 
